@@ -525,8 +525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -737.82007, y: 9.433411}
-  m_SizeDelta: {x: -1579.87, y: -831.19}
+  m_AnchoredPosition: {x: -737.82007, y: -1.9499512}
+  m_SizeDelta: {x: -1579.87, y: -853.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342822144
 MonoBehaviour:
@@ -1015,8 +1015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -737.82, y: 154}
-  m_SizeDelta: {x: -1579.9, y: -831.19}
+  m_AnchoredPosition: {x: -737.82007, y: 142.61002}
+  m_SizeDelta: {x: -1579.9, y: -853.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056435353
 MonoBehaviour:
@@ -1245,6 +1245,7 @@ GameObject:
   - component: {fileID: 1475244887}
   - component: {fileID: 1475244889}
   - component: {fileID: 1475244888}
+  - component: {fileID: 1475244890}
   m_Layer: 5
   m_Name: BckImage
   m_TagString: Untagged
@@ -1268,8 +1269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.72, y: 7.3}
-  m_SizeDelta: {x: 1971.54, y: 968.28}
+  m_AnchoredPosition: {x: -23.72, y: 8.836498}
+  m_SizeDelta: {x: 1971.54, y: 984.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475244888
 MonoBehaviour:
@@ -1309,6 +1310,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475244886}
   m_CullTransparentMesh: 1
+--- !u!114 &1475244890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475244886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26348a18483546039c5f8a014508c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  minSpeed: 0
+  maxSpeed: 0
+  secondsToMaxSpeed: 0
 --- !u!1001 &1613657771
 PrefabInstance:
   m_ObjectHideFlags: 0
