@@ -100,3 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26348a18483546039c5f8a014508c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minX: -9.09
+  maxX: 9.11
+  minY: -4.15
+  maxY: 4.21
+  minSpeed: 0.75
+  maxSpeed: 2
+  secondsToMaxSpeed: 30
