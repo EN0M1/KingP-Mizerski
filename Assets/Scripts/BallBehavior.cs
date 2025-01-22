@@ -17,9 +17,9 @@ public class BallBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        secondsToMaxSpeed = 30;
-        minSpeed = 0.75f;
-        maxSpeed = 2.0f;
+        // secondsToMaxSpeed = 30;
+        // minSpeed = 0.00001f;
+        // maxSpeed = 0.75f;
         targetPosition = getRandomPosition();
     }
 
@@ -27,9 +27,12 @@ public class BallBehavior : MonoBehaviour
     void Update()
     {
         Vector2 currentPosition = gameObject.GetComponent<Transform>().position;
-        if (targetPosition != currentPosition)
+        float distance = Vector2.Distance(currentPosition, targetPosition);
+        if (distance > 0.1f)
         {
-            float currentSpeed = minSpeed;
+            float difficulty = getDifficultyPercentage();
+            float currentSpeed = Mathf.Lerp(minSpeed, maxSpeed, difficulty);
+            currentSpeed = currentSpeed * Time.deltaTime;
             Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, currentSpeed);
             transform.position = newPosition;
         }
@@ -48,4 +51,13 @@ public class BallBehavior : MonoBehaviour
         Vector2 v = new Vector2(randX, randY);
         return v;
     }
+
+    private float getDifficultyPercentage() 
+    {
+        float difficulty = Mathf.Clamp01(Time.timeSinceLevelLoad / secondsToMaxSpeed);
+
+        return difficulty;
+    }
+
+    
 }
