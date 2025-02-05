@@ -954,6 +954,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1446194467}
+    - target: {fileID: 8783937392296855082, guid: 6294899aec7b149809b718ccd91b7622, type: 3}
+      propertyPath: maxSpeed
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783937392296855082, guid: 6294899aec7b149809b718ccd91b7622, type: 3}
+      propertyPath: minSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1168,6 +1176,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1446194467}
+    - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: maxSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: minSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4079408257128958270, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.3
@@ -1324,6 +1340,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1446194467}
+    - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: maxSpeed
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: minSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4079408257128958270, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.15
@@ -1937,7 +1961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: minSpeed
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 325919227918525807, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: secondsToMaxSpeed
