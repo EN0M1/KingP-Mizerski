@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class PinBehavior : MonoBehaviour
 {
-    public float speed = 2.0f;
     public Vector2 newPosition;
     public Vector3 mousePosG;
+    public float start;
+    public float baseSpeed = 2.0f;
+    public float dashSpeed = 8.0f;
+    public float dashDuration = 0.3f;
+    public bool dashing;
+    public static float cooldownRate = 1.0f;
+    public float endLastDash;
+    public static float cooldown = 0.0f;
     Camera cam;
     Rigidbody2D body;
 
@@ -12,18 +19,19 @@ public class PinBehavior : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        dashing = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Dash();
     }
 
     void FixedUpdate()
     {
         mousePosG = cam.ScreenToWorldPoint(Input.mousePosition);
-        newPosition = Vector2.MoveTowards(transform.position, mousePosG, speed * Time.fixedDeltaTime);
+        newPosition = Vector2.MoveTowards(transform.position, mousePosG, baseSpeed * Time.fixedDeltaTime);
         transform.position = newPosition;
         // sth about MovePosition, never saw anything like that in the slides, idk
     }
@@ -35,6 +43,35 @@ public class PinBehavior : MonoBehaviour
         if (collided == "Ball" || collided == "Wall")
         {
             Debug.Log("Game Over");
+        }
+    }
+
+    private void Dash()
+    {
+        if (dashing == true)
+        {
+            float currenttime = Time.time;
+            float timeDashing = currenttime - start;
+            if (timeDashing > dashDuration)
+            {
+                dashing = false;
+                speed = baseSpeed;
+                cooldown = cooldownRate;
+            }
+        }
+        else
+        {
+            cooldown = cooldown - Time.deltaTime;
+            if (cooldown < 0.0)
+            {
+                cooldown = 0.0f;
+            }
+            if (cooldown == 0.0 && input.GetMouseButtonDown(0))
+            {
+                dashing = true;
+                speed = dashSpeed;
+                start = Time.time;
+            }
         }
     }
 }
