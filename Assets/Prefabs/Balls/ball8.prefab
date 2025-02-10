@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 1338603833586857640, guid: 9fac73a288c1c4c61bc18e059e1f3bf6, type: 3}
     - target: {fileID: 4079408257128958270, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.4868956
       objectReference: {fileID: 0}
     - target: {fileID: 4079408257128958270, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.69993746
       objectReference: {fileID: 0}
     - target: {fileID: 4079408257128958270, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55,6 +55,14 @@ PrefabInstance:
     - target: {fileID: 7201162960615051867, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
       propertyPath: m_Name
       value: ball8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958918622550024606, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: m_Radius
+      value: 3.7582867
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958918622550024606, guid: a9e2ee6b105b348549cd5b95936b270d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000074505806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
