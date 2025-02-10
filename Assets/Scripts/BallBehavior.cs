@@ -55,7 +55,6 @@ public class BallBehavior : MonoBehaviour
                 launch();
             }
         }
-        Vector2 currentPosition = gameObject.GetComponent<Transform>().position;
         float distance = Vector2.Distance(currentPosition, targetPosition);
         if (distance > 0.1)
         {

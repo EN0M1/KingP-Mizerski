@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class DashIconBehavior : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class DashIconBehavior : MonoBehaviour
     void Start()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();
-        Image[] images = GetComponentInChildren<Image>();
+        Image[] images = GetComponentsInChildren<Image>();
         for (int i = 0; i < images.Length; i++)
         {
             if (images[i].tag == "Overlay")

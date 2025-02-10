@@ -5,6 +5,7 @@ public class PinBehavior : MonoBehaviour
     public Vector2 newPosition;
     public Vector3 mousePosG;
     public float start;
+    public float speed = 2.0f;
     public float baseSpeed = 2.0f;
     public float dashSpeed = 8.0f;
     public float dashDuration = 0.3f;
@@ -66,7 +67,7 @@ public class PinBehavior : MonoBehaviour
             {
                 cooldown = 0.0f;
             }
-            if (cooldown == 0.0 && input.GetMouseButtonDown(0))
+            if (cooldown == 0.0 && Input.GetMouseButtonDown(0))
             {
                 dashing = true;
                 speed = dashSpeed;
