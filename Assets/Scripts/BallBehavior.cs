@@ -75,7 +75,6 @@ public class BallBehavior : MonoBehaviour
             }
             currentSpeed = currentSpeed * Time.deltaTime;
             Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, currentSpeed);
-            transform.position = newPosition;
             body.MovePosition(newPosition);
         }
         else

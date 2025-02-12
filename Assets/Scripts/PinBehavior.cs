@@ -5,7 +5,7 @@ public class PinBehavior : MonoBehaviour
     public Vector2 newPosition;
     public Vector3 mousePosG;
     public float start;
-    public float speed = 2.0f;
+    public float speed;
     public float baseSpeed = 2.0f;
     public float dashSpeed = 8.0f;
     public float dashDuration = 0.3f;
@@ -19,8 +19,10 @@ public class PinBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        speed = baseSpeed;
         cam = Camera.main;
         dashing = false;
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -32,9 +34,8 @@ public class PinBehavior : MonoBehaviour
     void FixedUpdate()
     {
         mousePosG = cam.ScreenToWorldPoint(Input.mousePosition);
-        newPosition = Vector2.MoveTowards(transform.position, mousePosG, baseSpeed * Time.fixedDeltaTime);
-        transform.position = newPosition;
-        // sth about MovePosition, never saw anything like that in the slides, idk
+        newPosition = Vector2.MoveTowards(transform.position, mousePosG, speed * Time.fixedDeltaTime);
+        body.MovePosition(newPosition);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
