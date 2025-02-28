@@ -106,17 +106,18 @@ MonoBehaviour:
   maxX: 9.11
   minY: -4.15
   maxY: 4.21
-  minSpeed: 0.3
-  maxSpeed: 0.8
+  minSpeed: 0.5
+  maxSpeed: 1
   target: {fileID: 0}
   launching: 0
   timeLastLaunch: 0
-  launchDuration: 0
+  launchDuration: 3
   timeLaunchStart: 0
-  minLaunchSpeed: 0
-  maxLaunchSpeed: 0
-  cooldown: 0
-  secondsToMaxSpeed: 30
+  minLaunchSpeed: 1
+  maxLaunchSpeed: 1.5
+  cooldown: 10
+  secondsToMaxSpeed: 2
+  rerouting: 0
 --- !u!50 &2460904401302833690
 Rigidbody2D:
   serializedVersion: 5

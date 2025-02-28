@@ -26,7 +26,8 @@ public class BallBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        targetPosition = getRandomPosition();
+        initialPosition();
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -37,6 +38,8 @@ public class BallBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
+        Vector2 targetPosition = target.transform.position;
+
         body = GetComponent<Rigidbody2D>();
         Vector2 currentPosition = body.position;
         if (onCooldown() == false)
@@ -168,5 +171,18 @@ public class BallBehavior : MonoBehaviour
         {
             rerouting = true;
         }
+    }
+
+    public void setTarget(GameObject pin)
+    {
+        target = pin;
+    }
+
+    public void setBounds(float miX, float maX, float miY, float maY)
+    {
+        minX = miX;
+        maxX = maX;
+        minY = miY;
+        maxY = maY;
     }
 }
