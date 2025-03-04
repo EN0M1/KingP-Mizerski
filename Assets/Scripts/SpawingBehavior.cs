@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SpawingBehavior : MonoBehaviour
 {
+    public Pins pinsDB;
     public GameObject[] ballVariants;
     public GameObject targetObject;
     GameObject newObject;
@@ -17,6 +18,7 @@ public class SpawingBehavior : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnPin();
         spawnBall();
     }
 
@@ -46,5 +48,11 @@ public class SpawingBehavior : MonoBehaviour
 
         spawnRatio = Random.Range(minSpawn, maxSpawn);
         startTime = Time.time;
+    }
+
+    void spawnPin()
+    {
+        targetObject = Instantiate(pinsDB.getPin(CharacterManager.selection).prefab,
+            new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
 }

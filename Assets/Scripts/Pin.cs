@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+[System.Serializable]
+public class Pin
 {
+    public string name;
+    public GameObject prefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
